@@ -10,6 +10,7 @@ tasks:
     command: |
       sudo cp .gitpod/gitpod-setup-ddev.sh /usr/local/bin/.
       # download newest ddev to fix ddev start errors 
+      # not needed any more since now I understand I need to bump dockerfile to trigeer new image build (18-May-2022T08-59+0200)
       #curl -LO https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev.sh && bash install_ddev.sh
       echo "System is ready, clone a project, `ddev config` if needed, and `gitpod-setup-ddev` to run it"
 
