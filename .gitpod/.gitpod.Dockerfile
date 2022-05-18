@@ -11,8 +11,11 @@ RUN mkdir -p ~/.projector/configs  # Prevents projector install from asking for 
 RUN projector install 'PhpStorm 2022.1.1' --no-auto-run
 
 # Install ddev
+# it works - just update this file with nominal change - then the brew update is really executed! 
+#    so the official https://gitpod.io/#github.com/gitpod-io/template-php-drupal-ddev's docker image
+#    built by this dockerfile is (maybe) cached - hence that "brew update" was not working - you must update this 
+#    dockerfile to "kick off" another rebuild of docker image! 
 RUN brew update && brew install drud/ddev/ddev && mkcert -install
-
 ###
 ### Initiate a rebuild of Gitpod's image by updating this comment #1
 ####
